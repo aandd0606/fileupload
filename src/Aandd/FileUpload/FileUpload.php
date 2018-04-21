@@ -50,9 +50,13 @@ class FileUpload{
 
     protected static function fileDelete($id){
         $file = File::findOrFail($id);
-        Storage::delete("public/files/{$file->fileRealName}");
+        Storage::delete("{$this->path}/{$file->fileRealName}");
         File::destroy($id);
-        return redirect("book/{$file->book_id}/edit");
+        return redirect("{$this->type}/{$file->book_id}/edit");
+    }
+
+    public function render(){
+        return "產生刪除檔案的表單";
     }
 
 }
