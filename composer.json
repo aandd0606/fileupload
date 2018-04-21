@@ -1,0 +1,20 @@
+{
+    "name": "aandd0606/fileupload",
+    "description": "fileupload on laravel 5.6",
+    "type": "library",
+    "authors": [
+        {
+            "name": "aandd0606",
+            "email": "aandd0606@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aandd\\FileUpload\\": "src/Aandd/FileUpload"
+        }
+    }
+}
